@@ -16,7 +16,7 @@ sbtVersion := "1.2.0"
 
 enablePlugins(GitVersioning)
 git.useGitDescribe := true
-
+releaseIgnoreUntrackedFiles := true
 
 // The dependencies are in Maven format, with % separating the parts.  
 // Notice the extra bit "test" on the end of JUnit and ScalaTest, which will 
