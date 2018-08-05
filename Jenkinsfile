@@ -5,7 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sbt('SBT 0.12.3', 'test', '-Dsbt.log.noformat=true', '-Xmx2G -Xms512M', 'subproject')
+		git tag -a 0.1 -m "my version"
+		git push origin --tags
             }
         }
         stage('Test') {
