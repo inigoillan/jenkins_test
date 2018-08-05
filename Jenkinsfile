@@ -5,8 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-		git tag -a 0.1 -m "my version"
-		git push origin --tags
+		sh 'git tag -a 0.1 -m "my version"'
+		sh "git push origin --tags"
             }
         }
         stage('Test') {
